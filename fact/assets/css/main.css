@@ -1,0 +1,12 @@
+p{
+size: 3px;
+}
+
+section{
+    text-align: center;
+    background-color:grey;
+    margin-left: 10%;
+    margin-right:10%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
