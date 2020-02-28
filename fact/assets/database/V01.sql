@@ -7,7 +7,7 @@ CREATE TABLE user_account (
         reg_email varchar(80) UNIQUE,
         reg_pass varchar(10),
         reg_username varchar(40),
-        reg_admin boolean NOT NULL DEFAULT false,
+        reg_admin boolean DEFAULT false,
         reg_social boolean DEFAULT false,
         reg_noti_email boolean DEFAULT true,
         reg_noti_push boolean DEFAULT true,
