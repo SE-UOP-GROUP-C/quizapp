@@ -15,3 +15,29 @@ CREATE TABLE user_account (
         quiz_taken text,
         fact_taken text
 );
+
+CREATE TABLE fact_submission (
+      fact_sub_id serial PRIMARY KEY NOT NULL,
+      fact_sub_txt varchar(3000),
+      reg_uuid serial references user_account(reg_uuid)
+);
+
+CREATE TABLE fact (
+      fact_id serial PRIMARY KEY NOT NULL,
+      fact_topic VARCHAR(30) UNIQUE,
+      fact_txt VARCHAR(3000),
+      fact_sub_id serial references fact_submission(fact_sub_id)
+);
+
+
+CREATE TABLE question(
+      que_id serial PRIMARY KEY NOT NULL,
+      que_score integer,
+      que_taken boolean DEFAULT false,
+      que_dum1 text,
+      que_dum2 text,
+      que_ans text,
+      que_txt text,
+      fact_topic varchar(30) references fact (fact_topic)
+
+)
