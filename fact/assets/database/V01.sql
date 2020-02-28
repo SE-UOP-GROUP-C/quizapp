@@ -40,4 +40,17 @@ CREATE TABLE question(
       que_txt text,
       fact_topic varchar(30) references fact (fact_topic)
 
-)
+);
+
+CREATE TABLE fact_quiz (
+       PRIMARY KEY (quiz_id, fact_id),
+       que_id serial references question (que_id),
+       fact_id serial references fact (fact_id)
+);
+
+CREATE TABLE leaderboard(
+      PRIMARY KEY (lead_id, reg_uuid),
+      lead_id serial NOT NULL,
+      reg_uuid serial references user_account (reg_uuid)
+      overall_score integer
+);
