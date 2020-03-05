@@ -5,5 +5,5 @@ function onLogin(googleUser) {
   + "Given Name: " + profile.getGivenName() + "<br>"
   + "Family Name: " + profile.getFamilyName() + "<br>"
   + "Image URL: " + profile.getImageUrl() + "<br>"
-  + "Email: " + profile.getEmail(); + "<br>")
+  + "Email: " + profile.getEmail(); + "<br>"
 }
