@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="google-signin-scope" content="profile email">
         <meta name="google-signin-client_id" content="885994142596-fl2a021mj84nl776ga0k4lbpisa93nqa.apps.googleusercontent.com">
 
         <script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -12,9 +13,19 @@
     </head>
 <body>
   <div class="g-signin2" data-onsuccess="onLogin"></div>
-
+  <script>
+    function onLogin(googleUser) {
+      let profile = googleUser.getBasicProfile();
+      window.login.content="ID: " + profile.getID() + "\n"
+      + "Full Name: " + profile.getName() + "\n"
+      + "Given Name: " + profile.getGivenName() + "\n"
+      + "Family Name: " + profile.getFamilyName() + "\n"
+      + "Image URL: " + profile.getImageUrl() + "\n"
+      + "Email: " + profile.getEmail(); + "\n"
+  }
+  </script>
   <p id="login">
-    
+
   </p>
 
 
