@@ -16,7 +16,7 @@
   <script>
     function onLogin(googleUser) {
       let profile = googleUser.getBasicProfile();
-      window.login.content="ID: " + profile.getID() + "\n"
+      window.login.content="ID: " + profile.getId() + "\n"
       + "Full Name: " + profile.getName() + "\n"
       + "Given Name: " + profile.getGivenName() + "\n"
       + "Family Name: " + profile.getFamilyName() + "\n"
