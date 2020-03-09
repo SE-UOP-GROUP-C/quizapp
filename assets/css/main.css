@@ -13,10 +13,10 @@ section{
 nav li { /* Gives everything enclosed in a list and navigation tag the apperance of a button*/
   cursor: pointer;
   display: block;
-  padding: 2%;   
+  padding: 2%;
   text-align:center;
 align-self: center;
-    
+
   background-color: grey;
   border-style: outset;
   border-color:black;
@@ -30,4 +30,9 @@ nav a {/* Removes the underline of clicked unclicked links in the nav sections t
     font-size:1rem;
     color:white;
     text-decoration: none;
+}
+
+#login
+{
+  
 }
