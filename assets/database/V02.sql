@@ -31,7 +31,7 @@ CREATE TABLE fact_submission (
 
 CREATE TABLE fact (
       fact_id serial PRIMARY KEY NOT NULL,
-      fact_topic integer NOT NULL,
+      fact_topic integer UNIQUE,
       fact_txt VARCHAR(3000),
       fact_sub_id serial references fact_submission(fact_sub_id)
 );
@@ -43,11 +43,11 @@ CREATE TABLE question(
       que_dum2 text,
       que_ans text,
       que_txt text,
-      fact_topic integer references fact (fact_topic)
+      fact_topic integer references fact(fact_topic)
 );
 
 CREATE TABLE fact_quiz (
        PRIMARY KEY (que_id, fact_id),
-       que_id serial references question (que_id),
-       fact_id serial references fact (fact_id)
+       que_id serial references question(que_id),
+       fact_id serial references fact(fact_id)
 );
