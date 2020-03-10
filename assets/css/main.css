@@ -1,0 +1,38 @@
+h1{
+    color: white;
+}
+section{
+    text-align: center;
+    background-color:grey;
+    margin-left: 10%;
+    margin-right:10%;
+    padding-bottom:30%; /* Extends background to bottom of the page, theirs probably a cleaner way to do this since it extends the scrollwheel too. */
+
+}
+
+nav li { /* Gives everything enclosed in a list and navigation tag the apperance of a button*/
+  cursor: pointer;
+  display: block;
+  padding: 2%;
+  text-align:center;
+align-self: center;
+
+  background-color: grey;
+  border-style: outset;
+  border-color:black;
+  box-shadow: 0px 10px 25px #000000;
+  margin-right: 45%;
+  margin-left: 45%;
+  margin-bottom: 5%;
+}
+
+nav a {/* Removes the underline of clicked unclicked links in the nav sections to give it a cleaner apperance, will probably not need to exist when javascript is added. */
+    font-size:1rem;
+    color:white;
+    text-decoration: none;
+}
+
+#login
+{
+  
+}
