@@ -5,11 +5,54 @@
         <meta charset="utf-8">
         <title>Quiz App</title>
         <link rel="stylesheet" href="assets/css/main.css">
+		<script>
+            var myCookies ={}
+            function sCookies()
+            {
+                
+                if (document.getElementById("nightmode").value=="on"){
+                    
+
+                    document.getElementById("nightmode").value="off"
+                } else if (document.getElementById("nightmode").value=="off"){
+                    document.getElementById("nightmode").value="on"
+                }
+                
+                myCookies["_nightmode"] = document.getElementById("nightmode").value;
+                
+                document.cookie = "";
+                var expiresDate = new Date(Date.now()+10 * 365 * 24 * 60 * 60).toString() /*Theirs no way to set no expiry date, this just sets it to really far in the future*/
+                var cookieString = "";
+                for (var key in myCookies)
+                    {
+                        cookieString = key+"="+myCookies[key]+"; expires ="+expiresDate+";";
+                        document.cookie=cookieString;
+                    }
+                document.getElementById("out").innerHTML = document.cookie;
+
+                
+            }
+            function lcookies()
+            {
+                myCookies={};
+                var kv = document.cookie.split(";")
+                for (var id in kv)
+                    {
+                        var cookie = kv[id].split("=");
+                        myCookies[cookie[0].trim()]= cookie[1]
+                    }
+                
+                document.getElementById("nightmode").value = myCookies["_nightmode"]
+            }
+		</script>
     </head>
 <body>
 <section>
     <h1>Quiz App Settings</h1>
 
+	   <button value ="on" onclick="sCookies()" id ="nightmode" >Nightmode</button>
+
+    <p id="out">10</p>
 </section>
 
 
