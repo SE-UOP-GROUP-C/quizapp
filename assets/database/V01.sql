@@ -43,7 +43,7 @@ CREATE TABLE question(
 );
 
 CREATE TABLE fact_quiz (
-       PRIMARY KEY (quiz_id, fact_id),
+       PRIMARY KEY (que_id, fact_id),
        que_id serial references question (que_id),
        fact_id serial references fact (fact_id)
 );
