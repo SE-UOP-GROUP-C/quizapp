@@ -46,6 +46,7 @@ CREATE TABLE question(
       fact_topic integer references fact(fact_topic)
 );
 
+
 CREATE TABLE fact_quiz (
        PRIMARY KEY (que_id, fact_id),
        que_id serial references question(que_id),
