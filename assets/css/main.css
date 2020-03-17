@@ -1,9 +1,30 @@
+:root {
+    --primaryColour: #302AE6;
+    --secondaryColour: #536390;
+    --fontColour: #424242;
+    --bgColour: #fff;
+    --bg2Colour:#CCC;
+    --headingColour: #292922;
+}
+
+[dataTheme="dark"] {
+    --primaryColour: #9A97F3;
+    --secondaryColour: #818cab;
+    --fontColour: #e1e1ff;
+    --bgColour: #161625;
+    --bg2Colour:#393936;
+    --headingColour: #818cab;
+}
+
+.{
+    background-color: var(--bg2Colour)
+}
 h1{
-    color: white;
+    color: --headingColour;
 }
 section{
     text-align: center;
-    background-color:grey;
+    background-color: var(--bgColour);
     margin-left: 10%;
     margin-right:10%;
     padding-bottom:30%; /* Extends background to bottom of the page, theirs probably a cleaner way to do this since it extends the scrollwheel too. */
@@ -17,9 +38,9 @@ nav li { /* Gives everything enclosed in a list and navigation tag the apperance
   text-align:center;
 align-self: center;
 
-  background-color: grey;
+  background-color: var(--mainColour);
   border-style: outset;
-  border-color:black;
+  border-color: var(--secondaryColour);
   box-shadow: 0px 10px 25px #000000;
   margin-right: 45%;
   margin-left: 45%;
@@ -28,11 +49,17 @@ align-self: center;
 
 nav a {/* Removes the underline of clicked unclicked links in the nav sections to give it a cleaner apperance, will probably not need to exist when javascript is added. */
     font-size:1rem;
-    color:white;
+    color: var(-fontColour):
     text-decoration: none;
+}
+
+.checkboxWrapper{
+    display: inline-flex;
+    
 }
 
 #login
 {
   
 }
+
