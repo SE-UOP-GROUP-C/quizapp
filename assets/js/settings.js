@@ -1,4 +1,4 @@
- const toggleSwitch = document.querySelector('.checkboxWrapper input[type="checkbox"]');
+ const toggleSwitch = document.querySelector('.checkboxDisp input[type="checkbox"]');
         const currentTheme = localStorage.getItem('theme');
 
         if (currentTheme) {
