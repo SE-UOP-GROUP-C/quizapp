@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Fact submission</title>
+	<link rel="stylesheet" href="assets/css/submission.css">
+	<script src="assets/js/sub.js"></script>
+</head>
+<body>
+
+  <h1>Submit your fact</h1>
+  <form id="fact_submission" onsubmit="return validate();">
+  <label>
+        Admin Email
+        <input type="text" placeholder="up877496@myport.ac.uk" id="email">
+  </label>
+  <label>
+        Topic
+        <input type="text" placeholder="e.g. Science" id="topic">
+  </label>
+  <label>
+        Fact
+        <textarea id="fact"></textarea>
+  </label>
+		  <div id="status"></div>
+        <input type="submit">
+  </form>
+</body>
+</html>

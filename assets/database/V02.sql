@@ -29,10 +29,16 @@ CREATE TABLE fact_submission (
       reg_uuid serial references user_account(reg_uuid)
 );
 
+
+Create table topic (
+  topic_id integer PRIMARY KEY
+);
+
+
 CREATE TABLE fact (
       fact_id serial PRIMARY KEY NOT NULL,
-      fact_topic integer UNIQUE,
       fact_txt VARCHAR(3000),
+      fact_topic integer references topic(topic_id),
       fact_sub_id serial references fact_submission(fact_sub_id)
 );
 
@@ -43,8 +49,9 @@ CREATE TABLE question(
       que_dum2 text,
       que_ans text,
       que_txt text,
-      fact_topic integer references fact(fact_topic)
+      fact_topic integer references topic(topic_id)
 );
+
 
 CREATE TABLE fact_quiz (
        PRIMARY KEY (que_id, fact_id),
