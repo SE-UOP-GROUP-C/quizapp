@@ -4,7 +4,7 @@ let tVal = null;
 let count = 0;
 let list = [];
 let seen = [];
-
+ 
 
 function getTopic() {
     tVal = document.getElementById("topic").value;
