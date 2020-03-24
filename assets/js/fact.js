@@ -11,7 +11,7 @@ let req = new XMLHttpRequest();
 let tVal = 0; // topic value that is selected on the drop down and then 'submit'
 let count = 0;
 let list = []; // this stores the topic_id's in which they are randomly selected according to index, then display the fact.text under them.
-let seen = ["tom"]; // this would be called from the database and then updated, at the end of the session it would then be posted back
+let seen = []; // this would be called from the database and then updated, at the end of the session it would then be posted back
 
 let topics = ["History", "Geography", "Science"]; // hard coded
             // 1,2,3 eg
@@ -23,7 +23,7 @@ let url = [
 
 function getTopic() {
     tVal = document.getElementById("topic").value;
-    if (tVal !== 0 && count == 0){
+    if (tVal !== 0 && count >= 0){
         let indexVal = tVal - 1;
         getMain(url[indexVal]);
         document.getElementById("subT").remove();
@@ -76,11 +76,11 @@ function pushMain(data) {
     const raw = data['raw'];
     count++;
     console.log(count);
-    // count the amount of facts under that topic
+    // the loop count the amount of facts under that topic
     for( let i = 0; i < raw.length; i++){
         // specific topic filter
 
-        if (count == 1 && raw[i].topic == tVal) {
+        if (count >= 1 && raw[i].topic == tVal) {
 
           // check if .topic_id is in seen array -- test case tom
           if (seen.includes(raw[i].topic_id) == false){
