@@ -1,0 +1,25 @@
+{
+  "raw": [
+    {
+      "topic": "2",
+      "topic_id": "0",
+      "fact": {
+        "text": "California has more people than all of Canada."
+      }
+    },
+    {
+      "topic": "2",
+      "topic_id": "1",
+      "fact": {
+        "text": "Australia is wider than the moon."
+      }
+    },
+    {
+      "topic": "2",
+      "topic_id": "2",
+      "fact": {
+        "text": "Vatican City is the smallest country in the world."
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "raw": [
+    {
+      "topic": "3",
+      "topic_id": "0",
+      "fact": {
+        "text": "The average human body carries ten times more bacterial cells than human cells."
+      }
+    },
+    {
+      "topic": "3",
+      "topic_id": "1",
+      "fact": {
+        "text": "Water can boil and freeze at the same time."
+      }
+    },
+    {
+      "topic": "3",
+      "topic_id": "2",
+      "fact": {
+        "text": "20% of Earth’s oxygen is produced by the Amazon rainforest."
+      }
+    }
+  ]
+}
