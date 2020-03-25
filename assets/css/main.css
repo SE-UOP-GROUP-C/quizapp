@@ -19,7 +19,7 @@
 }
 
 body{
-    background-color: var(--bgColour)
+    background-color: var(--bgColour);
 }
 h1{
     color: --headingColour;
@@ -58,7 +58,7 @@ nav a {/* Removes the underline of clicked unclicked links in the nav sections t
 .checkboxWrapper{
     display: inline-flex;
     padding: 10px 10px;
-    
+
 }
 
 .checkboxDisp {
@@ -79,6 +79,5 @@ nav a {/* Removes the underline of clicked unclicked links in the nav sections t
 
 #login
 {
-  
-}
 
+}
