@@ -20,6 +20,62 @@
       "fact": {
         "text": "Vatican City is the smallest country in the world."
       }
+    },
+    {
+      "topic": "2",
+      "topic_id": "3",
+      "fact": {
+        "text": "90% of Earth's population lives in the Northern Hemisphere."
+      }
+    },
+    {
+      "topic": "2",
+      "topic_id": "4",
+      "fact": {
+        "text": "Continents shift at about the same rate as your fingernails grow."
+      }
+    },
+    {
+      "topic": "2",
+      "topic_id": "5",
+      "fact": {
+        "text": "Africa is the only continent that covers all four hemispheres."
+      }
+    },
+    {
+      "topic": "2",
+      "topic_id": "6",
+      "fact": {
+        "text": "Canada has more than half of all natural lakes in the world."
+      }
+    },
+    {
+      "topic": "2",
+      "topic_id": "7",
+      "fact": {
+        "text": "China shares its boarder with 14 countries."
+      }
+    },
+    {
+      "topic": "2",
+      "topic_id": "8",
+      "fact": {
+        "text": "Of the 25 highest peaks of the world 19 are in the Himalayas."
+      }
+    },
+    {
+      "topic": "2",
+      "topic_id": "9",
+      "fact": {
+        "text": "The shorsest name of a place is Å ."
+      }
+    },
+    {
+      "topic": "2",
+      "topic_id": "10",
+      "fact": {
+        "text": "Nauru is the only nation that has no official capital."
+      }
     }
   ]
 }

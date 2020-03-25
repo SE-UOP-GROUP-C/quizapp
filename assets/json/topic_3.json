@@ -20,6 +20,62 @@
       "fact": {
         "text": "20% of Earth’s oxygen is produced by the Amazon rainforest."
       }
+    },
+    {
+      "topic": "3",
+      "topic_id": "3",
+      "fact": {
+        "text": "Babies have around 100 more bones than adults."
+      }
+    },
+    {
+      "topic": "3",
+      "topic_id": "4",
+      "fact": {
+        "text": "The Eiffel Tower can be 15 cm taller during the summer."
+      }
+    },
+    {
+      "topic": "3",
+      "topic_id": "5",
+      "fact": {
+        "text": "Some metals are so reactive that they explode on contact with water."
+      }
+    },
+    {
+      "topic": "3",
+      "topic_id": "6",
+      "fact": {
+        "text": "Chalk is made from trillions of microscopic plankton fossils."
+      }
+    },
+    {
+      "topic": "3",
+      "topic_id": "7",
+      "fact": {
+        "text": "In 2.3 billion years it will be too hot for life to exist on Earth."
+      }
+    },
+    {
+      "topic": "3",
+      "topic_id": "8",
+      "fact": {
+        "text": "It takes 8 minutes, 19 seconds for light to travel from the Sun to the Earth."
+      }
+    },
+    {
+      "topic": "3",
+      "topic_id": "9",
+      "fact": {
+        "text": "Stomach acid is strong enough to dissolve steel."
+      }
+    },
+    {
+      "topic": "3",
+      "topic_id": "10",
+      "fact": {
+        "text": "Venus is the only planet to spin clockwise."
+      }
     }
   ]
 }
