@@ -16,9 +16,9 @@ let seen = []; // this would be called from the database and then updated, at th
 let topics = ["History", "Geography", "Science"]; // hard coded
             // 1,2,3 eg
 let url = [
-    "/assets/json/topic_1.json",
-    "/assets/json/topic_2.json",  // Example facts
-    "/assets/json/topic_3.json"
+    "/quizapp/assets/json/topic_1.json",
+    "/quizapp/assets/json/topic_2.json",  // Example facts
+    "/quizapp/assets/json/topic_3.json"
 ]
 
 function getTopic() {
