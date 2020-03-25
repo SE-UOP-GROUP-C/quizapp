@@ -23,12 +23,12 @@ let url = [
 
 function getTopic() {
     tVal = document.getElementById("topic").value;
-    if (tVal !== "0" && count >= 0){
+    if (tVal !== 0 && count >= 0){
         let indexVal = tVal - 1;
         getMain(url[indexVal]);
         document.getElementById("subT").remove();
         select.remove();
-        label.innerText = "Chosen topic: " + topics[indexVal];
+        label.textContent = "Chosen topic: " + topics[indexVal];
 
     }
     else {

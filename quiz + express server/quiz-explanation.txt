@@ -1,0 +1,22 @@
+Questions are stored in a PostgreSQL db with the answers being stored as an array of strings:
+- This is so that we can have any number of answers (2 for true/false questions or 40 if you want).
+- It also makes the database less awkward so we don't have empty columns and stuff
+- Refer to sql.txt for how input is done for this
+
+1. Client goes to quiz page (either /quizCreation.html or /quiz) which has an eventListener for loading.
+2. Client sends request to server (/load?t={topicID}&q={questionID}).
+3. Server queries database for question info using question ID (and eventually topic ID) as parameters from the url (client still only sees '/quiz').
+4. Server formats the result into a JSON object with the question, options and the correct answer as properties and sends that to client.
+5. Client generates a H2 element with the question as its value and a bunch of radio buttons (and labels) for the answers. 
+6. As soon as the user clicks on any of them, client checks which is selected and sends its value to server (/answer?q={questionID}&a={answer}).
+7. Server checks it against the correct answer by fetching the same JSON object from earlier and responds with either 'correct' or 'incorrect'.
+8. Whether it is correct or not, it removes the stuff on the page, changes the question ID and reloads the function.
+9. Next question is loaded. Currently it is set to 5 questions, after which it should display the score but I have yet to do that so it just displays some text.
+
+The page doesn't reload between questions.
+
+Still need to figure out a way to count the score and do something with it (I assume this would be server-side).
+
+Client doesn't touch the database even once, it just sends values and queries use parameters so they will escape any weird characters (and stop injection attempts).
+
+Couldn't get the VM db working with this so I just locally installed PostgreSQL. If you figure that out just change the database info in 'server.js'.
