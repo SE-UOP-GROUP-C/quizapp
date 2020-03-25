@@ -28,7 +28,7 @@ function getTopic() {
         getMain(url[indexVal]);
         document.getElementById("subT").remove();
         select.remove();
-        label.textContent = "Chosen topic: " + topics[indexVal];
+        label.innerText = "Chosen topic: " + topics[indexVal];
 
     }
     else {
