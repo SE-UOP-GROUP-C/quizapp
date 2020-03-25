@@ -58,13 +58,13 @@ async function checkAnswer(target) {
       const question = findWithAttr(data, 'question', document.querySelector('#questionText').innerHTML); // Finds the current question within the 'questions' JSON object
 
       if (target.textContent == data[question].correct) {
-        target.style.backgroundColor = 'green';
+        target.style.backgroundColor = 'rgb(67, 181, 129)';
         noCorrect += 1;
         score += 10;
       }
       else {
         score -= 10;
-        target.style.backgroundColor = 'red';
+        target.style.backgroundColor = 'rgb(240, 71, 71)';
       }
     });
 
