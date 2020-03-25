@@ -1,0 +1,44 @@
+CREATE TABLE topics (
+topicID SERIAL PRIMARY KEY,
+topic TEXT NOT NULL
+);
+
+INSERT INTO topics VALUES
+(DEFAULT, 'Science'),
+(DEFAULT, 'History'),
+(DEFAULT, 'Maths')
+;
+
+CREATE TABLE questions (
+questionID SERIAL PRIMARY KEY,
+question TEXT NOT NULL,
+ans text NOT NULL,
+dum1 text NOT NULL,
+dum2 text NOT NULL,
+topicID integer REFERENCES topics(topicID)
+);
+
+INSERT INTO questions VALUES
+(DEFAULT, 'What is the 4th planet from the sun?', 'Mars', 'Venus', 'Earth', 1),
+(DEFAULT, 'Which chemical element is abbreviated to ''Pb''?', 'Lead', 'Zinc', 'Parabellum', 1),
+(DEFAULT, 'What is the distance between the Earth and the Moon?', '384,400km', '38,440km', '3,844km', 1),
+(DEFAULT, 'At which pH level does a substance become acidic?', 'Below 7', 'Above 7', 'Exactly 7', 1),
+(DEFAULT, 'What is the function of a gallbladder?', 'Stores bile', 'Stores urine', 'Produces insulin', 1),
+(DEFAULT, 'How far from Earth is the Sun?', '150 million km', '15 million km', '1.5 million km', 1),
+(DEFAULT, 'What famous scientist was awarded the 1921 Nobel Prize in Physics for his work on theoretical physics?', 'Albert Einstein', 'Stephen Hawking', 'Stephen Fry', 1),
+(DEFAULT, 'What is the 7th element on the periodic table?', 'Nitrogen', 'Helium', 'Potassium', 1),
+(DEFAULT, 'Is the compound ''HCl'' an acid or base?', 'Acid', 'Base', 'Neither', 1),
+(DEFAULT, 'What kind of animal are humans?', 'Mammals', 'Amphibians', 'Fish', 1),
+(DEFAULT, 'What year did World War I begin?', '1914', '1923', '1917', 2),
+(DEFAULT, 'Who was the second man to walk on the moon?', 'Buzz Aldrin', 'Neil Armstrong', 'Mark Hamill', 2),
+(DEFAULT, 'Who did Henry VIII first marry?', 'Catherine of Aragon', 'Anne Boleyn', 'Catherine Parr', 2),
+(DEFAULT, 'Who was the first US President', 'George Washington', 'George Bush', 'Abraham Lincoln', 2),
+(DEFAULT, 'Which country was the Battle of Hastings fought', 'England', 'France', 'Wales', 2),
+(DEFAULT, 'What is 1 + 1?', '2', '1', '3', 3),
+(DEFAULT, 'What is 2 + 4?', '6', '4', '2', 3),
+(DEFAULT, 'What is 8 + 11?', '19', '18', '17', 3),
+(DEFAULT, 'What is 18 / 6?', '3', '6', '9', 3),
+(DEFAULT, 'What is 9^2?', '81', '18', '243', 3),
+(DEFAULT, 'What is the square root of 49?', '7', '6', '8', 3),
+(DEFAULT, 'What is 3/8ths as a percentage?', '37.5%', '62.5%', '33%', 3)
+;
