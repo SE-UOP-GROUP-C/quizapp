@@ -1,83 +1,180 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
 :root {
-    --primaryColour: #302AE6;
+    --primaryColour: #282830;
+    --primaryColourSecond: #404052;
     --secondaryColour: #536390;
     --fontColour: #424242;
     --bgColour: #fff;
-    --bg2Colour:#CCC;
+    --bg2Colour:#f2f3f5;
     --headingColour: #292922;
     --inverse:#9A97F3;
+    --retrunCol: ;
+    --theme: #2f3136;
 }
 
 [dataTheme="dark"] {
     --primaryColour: #9A97F3;
+    --primaryColourSecond: #7c79e4;
     --secondaryColour: #818cab;
     --fontColour: #e1e1ff;
-    --bgColour: #161625;
-    --bg2Colour:#393936;
+    --bgColour: #2f3136;
+    --bg2Colour:#36393f;
     --headingColour: #818cab;
-    --inverse:#302AE6;
+    --inverse:#282830;
+    --theme: #f2f3f5;
 }
 
-body{
+body {
     background-color: var(--bgColour);
+    font-family: 'Open Sans', serif;
+    color: var(--fontColour);
+    font-size: 1rem;
 }
-h1{
-    color: --headingColour;
+
+h1, h2 {
+    font-family: 'Roboto Mono', monospace;
+    color: var(--headingColour);
 }
-section{
+h1 {
+   font-size: 2rem;
+}
+
+section {
+    padding: 1rem;
     text-align: center;
     background-color: var(--bg2Colour);
     margin-left: 10%;
     margin-right:10%;
-    padding-bottom:30%; /* Extends background to bottom of the page, theirs probably a cleaner way to do this since it extends the scrollwheel too. */
-
+    height: 80vh;
+    margin-bottom: 10px;
+    /* padding-bottom:30%; Extends background to bottom of the page, theirs probably a cleaner way to do this since it extends the scrollwheel too. */
 }
 
-nav li { /* Gives everything enclosed in a list and navigation tag the apperance of a button*/
-  cursor: pointer;
-  display: block;
-  padding: 2%;
-  text-align:center;
-align-self: center;
-
-  background-color: var(--mainColour);
-  border-style: outset;
-  border-color: var(--secondaryColour);
-  box-shadow: 0px 10px 25px #000000;
-  margin-right: 45%;
-  margin-left: 45%;
-  margin-bottom: 5%;
+.answer {
+  background: var(--inverse);
+  border-radius: 0.75rem;
+  color: var(--fontColour);
+  padding: 0.775rem 1.2rem;
+  font-size: 1rem;
+  margin: 0.6rem auto
 }
 
-nav a {/* Removes the underline of clicked unclicked links in the nav sections to give it a cleaner apperance, will probably not need to exist when javascript is added. */
-    font-size:1rem;
-    color: var(-fontColour):
+nav {
+    text-align:center;
+}
+
+nav ul {
+  padding: 0;
+  list-style-position: inside;
+  list-style-type: none;
+}
+
+a {
+  /* Removes the underline of clicked unclicked links in the nav sections to give it a cleaner apperance, will probably not need to exist when javascript is added. */
+    color: var(--fontColour);
     text-decoration: none;
 }
 
+a:visited {
+    color: var(--fontColour);
+    text-decoration: none;
+}
+
+.text * {
+    vertical-align: middle;
+}
+
+
+.link {
+    background: var(--inverse);
+    border: none;
+    border-radius: 0.75rem;
+    display: inline-block;
+    color: var(--fontColour);
+    padding: 0.6rem 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    margin: 0.6rem 0.2rem;
+    cursor: pointer;
+}
+
+.link:hover {
+  text-decoration: none;
+  color: var(--fontColour);
+  background: var(--secondaryColour);
+}
+
+textarea {
+    margin: 0 0.2rem;
+    margin-top: 0.6rem;
+    width: 11rem;
+    background: var(--inverse);
+    border: none;
+    border-radius: 0.75rem;
+    color: var(--fontColour);
+    padding: 0.775rem 1.2rem;
+    font-size: 1rem;
+    font-family: 'Open sans', serif;
+}
+
+select {
+  background: var(--inverse);
+  border: none;
+  border-radius: 0.75rem;
+  color: var(--fontColour);
+  padding: 0.775rem 1.2rem;
+  font-size: 1rem;
+  margin: 0.6rem 0.2rem;
+  cursor: pointer;
+  width: 20rem;
+}
+
+#button, input, button {
+  background: var(--inverse);
+  border: none;
+  border-radius: 0.75rem;
+  color: var(--fontColour);
+  padding: 0.775rem 1.2rem;
+  font-size: 1rem;
+  margin: 0.6rem 0.2rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+#button:hover, button:hover {
+  color: var(--fontColour);
+  background: var(--secondaryColour);
+}
+
+
+#back {
+  color: var(--bg2Colour);
+  background: var(--primaryColour);
+}
+
+#back:hover {
+  background: var(--primaryColourSecond);
+}
+ /* Settings wiget CSS */
 .checkboxWrapper{
     display: inline-flex;
     padding: 10px 10px;
-
 }
-
 .checkboxDisp {
     transition-duration: 0.2s;
-      display: inline-block;
+    display: inline-block;
     height: 34px;
     position: relative;
     width: 34px;
     border-radius: 50%;
     cursor:pointer;
-    background-color: var(--inverse);
+    background-color: var(--theme);
 }
 .checkboxDisp input{
     display:none;
-
-
-}
-
-#login
-{
 
 }
