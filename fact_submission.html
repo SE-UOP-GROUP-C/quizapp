@@ -7,23 +7,29 @@
 	<script src="assets/js/sub.js"></script>
 </head>
 <body>
-
+	    <div class="checkboxWrapper">
+	      <label  class = "checkboxDisp" for="checkbox">
+	        <input type="checkbox" id="checkbox" />
+	      </label>
+	    </div>
+	    <section>
   <h1>Submit your fact</h1>
-  <form id="fact_submission" onsubmit="return validate();">
+	<form action="https://formspree.io/up877496@myport.ac.uk"  method="POST">
   <label>
-        Admin Email
-        <input type="text" placeholder="up877496@myport.ac.uk" id="email">
+         Email
+        <input type="text" name="email" placeholder="example@gmail.com" id="email">
   </label>
   <label>
         Topic
-        <input type="text" placeholder="e.g. Science" id="topic">
+        <input type="text" name="topic"placeholder="e.g. Science" id="topic">
   </label>
   <label>
         Fact
-        <textarea id="fact"></textarea>
+        <textarea name="fact "id="fact"></textarea>
   </label>
 		  <div id="status"></div>
         <input type="submit">
   </form>
+</section>
 </body>
 </html>
