@@ -16,10 +16,12 @@ Mock data has been added via JSON to be a visual representation of what the Quiz
 - [ ] Notification method
 - [X] Leaderboard
 - [X] Fact submission
+- [X] Settings (theme)
 - [ ] Tracking data
 
 ### Low
 - [ ] Connect social media
+
 
 ## References
 https://links.rdfx.org/#f0ac0e87
