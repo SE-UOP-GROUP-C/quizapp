@@ -27,6 +27,62 @@
       "fact": {
         "text": "All British tanks since 1945 have included equipment to make tea."
       }
+    },
+    {
+      "topic": "1",
+      "topic_id": "john",
+      "fact": {
+        "text": "Hitler, Mussolini, and Stalin Were All Nominated for the Nobel Peace Prize."
+      }
+    },
+    {
+      "topic": "1",
+      "topic_id": "ray",
+      "fact": {
+        "text": "The swastika was actually a symbol of good -- until the Nazis got ahold of it."
+      }
+    },
+    {
+      "topic": "1",
+      "topic_id": "jack",
+      "fact": {
+        "text": "Plastic surgery was invented because of World war 1."
+      }
+    },
+    {
+      "topic": "1",
+      "topic_id": "alex",
+      "fact": {
+        "text": "More than 600 assassination attempts were committed on Fidel Castro."
+      }
+    },
+    {
+      "topic": "1",
+      "topic_id": "michael",
+      "fact": {
+        "text": "The army of Alexander the great reached India in 327 BC."
+      }
+    },
+    {
+      "topic": "1",
+      "topic_id": "wayne",
+      "fact": {
+        "text": "Rome's emperor, Gaius Julius Caesar Augustus Germanicus, also known as Caligula, made one of his favorite horses a senator."
+      }
+    },
+    {
+      "topic": "1",
+      "topic_id": "vincent",
+      "fact": {
+        "text": "The Anglo-Zanzibar War is the shortest war in recorded history. The war, which was between the United Kingdom and the Zanzibar Sultanate, lasted only 38 minutes in 1896."
+      }
+    },
+    {
+      "topic": "1",
+      "topic_id": "chris",
+      "fact": {
+        "text": "The great Omaha Indian Chief Blackbird was said to have loved his horse so much that he was buried sitting on top of it."
+      }
     }
   ]
 }
