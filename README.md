@@ -9,18 +9,20 @@ Mock data has been added via JSON to be a visual representation of what the Quiz
 - [X] Database
   - [X] ERD
   - [X] Creation file
-  - [ ] Population
+  - [X] Population (partial)
   - [ ] Link to front end
 
 ### Medium
 - [ ] Notification method
 - [X] Leaderboard
 - [X] Fact submission
+- [X] Settings (theme)
 - [ ] Tracking data
 
 ### Low
 - [ ] Connect social media
 
+
 ## References
-https://links.rdfx.org/#f0ac0e87
-https://developer.mozilla.org/en-US/docs/Web/JavaScript
+- https://links.rdfx.org/#f0ac0e87
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript
