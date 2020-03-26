@@ -3,6 +3,24 @@ let currentTopic = "";
 let score = 0;
 let noCorrect = 0;
 
+// Uses the Fisher-Yates algorithm to shuffle an array
+function shuffle(array) {
+  var m = array.length,
+    t, i;
+
+  // While there remain elements to shuffle…
+  while (m) {
+
+    // Pick a remaining element…
+    i = Math.floor(Math.random() * m--);
+
+    // And swap it with the current element.
+    t = array[m];
+    array[m] = array[i];
+    array[i] = t;
+  }
+}
+
 // Function for finding an object within an array using its properties
 function findWithAttr(array, attr, value) {
   for (var i = 0; i < array.length; i += 1) {
@@ -15,7 +33,9 @@ function findWithAttr(array, attr, value) {
 
 function loadQuestions(topic) {
   currentTopic = topic;
-  document.body.innerHTML = '';
+  const section = document.querySelector('section');
+  document.body.removeChild(section);
+  console.log("qweqwe");
   const url = './assets/json/questions/' + topic + '.json';
   fetch(url)
     .then(function(res) {
@@ -28,7 +48,7 @@ function loadQuestions(topic) {
 }
 
 async function displayQuestion(data) {
-
+  shuffle(data[questionNo].options);
   const questionContainer = document.createElement('section');
   questionContainer.setAttribute('class', 'question');
   document.body.appendChild(questionContainer);
