@@ -1,8 +1,8 @@
-/*
-    This is a demonstration of how the fact page would present and store facts.
-    Future for this would be to have the 'seen' array submit to the database and
-    pulling data would not be done through multiple 'facts' being in the same json file.
-*/
+/**
+ *  This is a demonstration of how the fact page would present and store facts.
+ *  Future for this would be to have the 'seen' array submit to the database and
+ *  pulling data would not be done through multiple 'facts' being in the same json file.
+ */
 const main = document.querySelector('main');
 const select = document.querySelector('select');
 const label = document.querySelector('label');
@@ -11,7 +11,7 @@ let req = new XMLHttpRequest();
 let tVal = 0; // topic value that is selected on the drop down and then 'submit'
 let count = 0;
 let list = []; // this stores the topic_id's in which they are randomly selected according to index, then display the fact.text under them.
-let seen = []; // this would be called from the database and then updated, at the end of the session it would then be posted back
+let seen = ["tom"]; // this would be called from the database and then updated, at the end of the session it would then be posted back
 
 let topics = ["History", "Geography", "Science"]; // hard coded
             // 1,2,3 eg
@@ -21,6 +21,10 @@ let url = [
     "/quizapp/assets/json/topic_3.json"
 ]
 
+/**
+ *  This function checks which topic has been selected, the corrisponding value is
+ *  passed to which the specific JSON file is used and then calls getMain() function
+ */
 function getTopic() {
     tVal = document.getElementById("topic").value;
     if (tVal !== "0" && count >= 0){
@@ -50,6 +54,9 @@ document.addEventListener("DOMContentLoaded", function () {
     item3.addEventListener("click", reloadPage);
 });
 
+/**
+ *  This function takes the location of the topic JSON file and then makes a 'GET' XMLHttpRequest
+ */
 function getMain(url) {
     req.open('GET', url, true);
     req.onerror = function () {
@@ -59,16 +66,26 @@ function getMain(url) {
     req.send();
 }
 
+// this assigns the request reponse into a const called data which is then passed to pushMain()
 req.onload = function(){
   const data = req.response;
   pushMain(data);
 }
 
-// Choose a random topic_id from the list
+/**
+ *  This function gets a random integer between 0 and n-1, which n is == max
+ */
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
+/**
+ *  This function takes the JSON file and runs throught the array adding the
+ *  topic_id data to list array, it checks if a user has already seen a topic_id
+ *  and if it has it skips adding the topic_id data to the list. It then chooses a
+ *  random index number from the list, it then displayes this in the main tag.
+ *  The topic_id is then pushed into the seen array and pandsFunc() is called.
+ */
 function pushMain(data) {
     const raw = data['raw'];
     count++;
@@ -76,10 +93,8 @@ function pushMain(data) {
     // the loop count the amount of facts under that topic
     for( let i = 0; i < raw.length; i++){
         // specific topic filter
-
         if (count >= 1 && raw[i].topic == tVal) {
-
-          // check if .topic_id is in seen array -- test case tom
+          // check if .topic_id is in seen array -- test case "tom"
           if (seen.includes(raw[i].topic_id) == false){
             // appending that to a temp index list.
               list.push(raw[i].topic_id);
@@ -109,7 +124,12 @@ function pushMain(data) {
     pandsFunc(factLocation, factText);
 }
 
-// New fact button! (same topic selected) // in this case it will use the rest of the list
+/**
+ *  This function is the 'new fact' button, in which the array is re assigned a const.
+ *  Then a random index is chosen again, the topic_id is checked against the index
+ *  element and then displayed onto the main tag. The topic_id is then pushed into
+ *  the seen array and pandsFunc() is called.
+ */
 function rePushHead() {
     count++;
     console.log(count);
@@ -129,8 +149,10 @@ function rePushHead() {
     pandsFunc(factLocation, factText);
 
 }
-
-// checks if list is long enough to to splice (remove element), splices the list array and then
+/**
+ *  This function checks if list is long enough to to splice (remove element),
+ *  splices the list array and then puts the new content onto the main tag.
+ */
 function pandsFunc(factLocation, factText) {
   if (list.length > 0) {
     list.splice(factLocation, 1);
@@ -141,12 +163,16 @@ function pandsFunc(factLocation, factText) {
   }
   else {
     // Error handle just incase.
+    // Also shows if the array has been diminished
     location.reload();
     alert("Error array is empty!");
 
   }
 }
 
+/**
+ *  This function reloads the page when called for 'new topic' button
+ */
 function reloadPage() {
     location.reload();
 }
