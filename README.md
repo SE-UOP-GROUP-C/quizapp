@@ -1,7 +1,7 @@
 # QuizApp Coursework
-[App landing page](https://se-uop-group-c.github.io/quizapp/)
+##### App Landing Page - https://se-uop-group-c.github.io/quizapp/
 ## Priority List (Prototype)
-Mock data has been added via JSON to be a visual representation of what the Quiz App will do. (interactive demo).
+Mock data has been added via JSON to be a visual representation of what the Quiz App will do. (interactive demo)
 ### High
 - [X] Google sign in
 - [X] Quizzes
@@ -9,7 +9,7 @@ Mock data has been added via JSON to be a visual representation of what the Quiz
 - [X] Database
   - [X] ERD
   - [X] Creation file
-  - [ ] Population
+  - [X] Population (partial)
   - [ ] Link to front end
 
 ### Medium
