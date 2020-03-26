@@ -9,7 +9,7 @@ Mock data has been added via JSON to be a visual representation of what the Quiz
 - [X] Database
   - [X] ERD
   - [X] Creation file
-  - [ ] Population
+  - [X] Population (partial)
   - [ ] Link to front end
 
 ### Medium
