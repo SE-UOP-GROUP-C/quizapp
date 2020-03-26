@@ -12,6 +12,12 @@ let tVal = 0; // topic value that is selected on the drop down and then 'submit'
 let count = 0;
 let list = []; // this stores the topic_id's in which they are randomly selected according to index, then display the fact.text under them.
 let seen = ["tom"]; // this would be called from the database and then updated, at the end of the session it would then be posted back
+/**
+ *  TEST CASE - seen array
+ *  "tom" under topic_1 aka value "1"
+ *  as well as this the document logs its
+ *  steps as the console.log()'s are set off
+ */
 
 let topics = ["History", "Geography", "Science"]; // hard coded
             // 1,2,3 eg
@@ -94,7 +100,12 @@ function pushMain(data) {
     for( let i = 0; i < raw.length; i++){
         // specific topic filter
         if (count >= 1 && raw[i].topic == tVal) {
-          // check if .topic_id is in seen array -- test case "tom"
+          /**
+           *  The test case for this is the topic_id that is called "tom" (within topic_1 JSON)
+           *  This should in this case have "tom" within the seen array (line 14), from here the
+           *  specific fact "Thomas Edison Didnt Invent the Light Bulb." should not show.
+           */
+          // check if .topic_id is in seen array
           if (seen.includes(raw[i].topic_id) == false){
             // appending that to a temp index list.
               list.push(raw[i].topic_id);
