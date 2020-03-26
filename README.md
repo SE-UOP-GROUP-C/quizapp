@@ -24,5 +24,5 @@ Mock data has been added via JSON to be a visual representation of what the Quiz
 
 
 ## References
-https://links.rdfx.org/#f0ac0e87
-https://developer.mozilla.org/en-US/docs/Web/JavaScript
+- https://links.rdfx.org/#f0ac0e87
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript
