@@ -1,7 +1,7 @@
 const express = require ('express');
 const mongoose = require ('mongoose');
 var Schema = mongoose.Schema;
-const port = 3000;
+const port = process.env.PORT || 3000;
 const app = express();
 
 const dbURI = "mongodb+srv://heroku:heroku@quizappdatabase-9jiq4.gcp.mongodb.net/test?retryWrites=true&w=majority"
@@ -47,7 +47,7 @@ var questionSchema = new Schema({
 })
 
 //Create a connection to the database
-mongoose.connect('mongodb://localhost:27017/app', {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology: true})
   .then(()=>{
     console.log('Successfully connected to database.');
     console.log("Displaying contents of the database");
