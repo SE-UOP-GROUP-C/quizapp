@@ -221,7 +221,7 @@ db.once('open', function(){
   });
 
 
-app.post("/login", function(request, response){
+app.post("https://quizapp-se-uop-6c.herokuapp.com/login", function(request, response){
   console.log("a");
   if (request.type == "check") {
     userModel.find(function (err, contents){
