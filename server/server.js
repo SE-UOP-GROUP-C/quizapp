@@ -4,6 +4,8 @@ var Schema = mongoose.Schema;
 const port = 3000;
 const app = express();
 
+const dbURI = "mongodb+srv://heroku:heroku@quizappdatabase-9jiq4.gcp.mongodb.net/test?retryWrites=true&w=majority"
+
 function SetupServer()
 {
   //Place server-init methods here
