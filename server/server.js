@@ -227,7 +227,7 @@ app.use(function(req, res, next) {
 });
 
 app.get("/login", function(request, response){
-  console.log(request.type);
+  console.log(request);
   if (request.type == "check") {
     userModel.find(function (err, contents){
       if (err) return console.console.error(err);
