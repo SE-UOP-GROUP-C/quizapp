@@ -221,7 +221,7 @@ db.once('open', function(){
   });
 
 
-app.post("https://quizapp-se-uop-6c.herokuapp.com/login", function(request, response){
+app.post("/login", function(request, response){
   console.log("a");
   if (request.type == "check") {
     userModel.find(function (err, contents){
@@ -229,6 +229,7 @@ app.post("https://quizapp-se-uop-6c.herokuapp.com/login", function(request, resp
       if (contents.length == 0) {
         response.body = false;
         response.setRequestHeader("Access-Control-Allow-Origin", "https://quizapp-se-uop-6c.herokuapp.com/login");
+        response.send(JSON.stringify(false))
       }
   });
   }
