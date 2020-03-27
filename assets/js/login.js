@@ -1,4 +1,5 @@
 function onLogin(googleUser) {
+  let dataToSend = undefined;
   if (googleUser != undefined) {
     let profile = googleUser.getBasicProfile();
     window.login.textContent = "ID: " + profile.getId() + "<br>"
@@ -7,13 +8,13 @@ function onLogin(googleUser) {
     + "Family Name: " + profile.getFamilyName() + "<br>"
     + "Image URL: " + profile.getImageUrl() + "<br>"
     + "Email: " + profile.getEmail(); + "<br>"
+
+    dataToSend = {type: "check", id: profile.getId()};
   }
 
-  let dataToSend = undefined;
+
   if (googleUser == undefined) {
     dataToSend = {type: "check", id: 1};
-  } else {
-    dataToSend = {type: "check", id: profile.getId()};
   }
   let jsonToSend = JSON.stringify(dataToSend);
   let request = new XMLHttpRequest();
