@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-
+/**
+ *  :root and [dataTheme] is used for the light and dark appearance that
+ *  relies on variables to be used for specifying colours when changing theme
+ */
 :root {
     --primaryColour: #282830;
     --primaryColourSecond: #404052;
@@ -25,7 +28,9 @@
     --inverse:#282830;
     --theme: #f2f3f5;
 }
-
+/**
+ *  Styling specific for page tags
+ */
 body {
     background-color: var(--bgColour);
     font-family: 'Open Sans', serif;
@@ -49,16 +54,6 @@ section {
     margin-right:10%;
     height: 80vh;
     margin-bottom: 10px;
-    /* padding-bottom:30%; Extends background to bottom of the page, theirs probably a cleaner way to do this since it extends the scrollwheel too. */
-}
-
-.answer {
-  background: var(--inverse);
-  border-radius: 0.75rem;
-  color: var(--fontColour);
-  padding: 0.775rem 1.2rem;
-  font-size: 1rem;
-  margin: 0.6rem auto
 }
 
 nav {
@@ -72,7 +67,6 @@ nav ul {
 }
 
 a {
-  /* Removes the underline of clicked unclicked links in the nav sections to give it a cleaner apperance, will probably not need to exist when javascript is added. */
     color: var(--fontColour);
     text-decoration: none;
 }
@@ -81,12 +75,26 @@ a:visited {
     color: var(--fontColour);
     text-decoration: none;
 }
-
+/**
+ *  Styling specific for quizSelect page
+ */
+.answer {
+  background: var(--inverse);
+  border-radius: 0.75rem;
+  color: var(--fontColour);
+  padding: 0.775rem 1.2rem;
+  font-size: 1rem;
+  margin: 0.6rem auto
+}
+/**
+ *  Styling specific for fact submission page
+ */
 .text * {
     vertical-align: middle;
 }
-
-
+/**
+ *  Anchor tag 'button' styling
+ */
 .link {
     background: var(--inverse);
     border: none;
@@ -106,7 +114,9 @@ a:visited {
   color: var(--fontColour);
   background: var(--secondaryColour);
 }
-
+/**
+ *  Styling input/textarea/select to match the site styling
+ */
 textarea {
     margin: 0 0.2rem;
     margin-top: 0.6rem;
@@ -131,7 +141,9 @@ select {
   cursor: pointer;
   width: 20rem;
 }
-
+/**
+ *  Button styling which follows the link class styling
+ */
 #button, input, button {
   background: var(--inverse);
   border: none;
@@ -159,7 +171,9 @@ select {
 #back:hover {
   background: var(--primaryColourSecond);
 }
- /* Settings wiget CSS */
+ /**
+  *  Settings wiget styling
+  */
 .checkboxWrapper{
     display: inline-flex;
     padding: 10px 10px;
