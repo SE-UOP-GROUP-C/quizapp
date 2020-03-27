@@ -222,18 +222,17 @@ db.once('open', function(){
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, GET, POST");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
 
 app.get("/login", function(request, response){
-  console.log("a");
+  console.log(request.type);
   if (request.type == "check") {
     userModel.find(function (err, contents){
       if (err) return console.console.error(err);
       if (contents.length == 0) {
         response.body = false;
-        response.send(JSON.stringify(false))
       }
   });
   }
