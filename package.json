@@ -15,7 +15,7 @@
   "dependencies":{
     "express": "4.17.1",
     "mongoose": "5.9.6"
-  }
+  },
   "bugs": {
     "url": "https://github.com/Wauchope/quizapp/issues"
   },
