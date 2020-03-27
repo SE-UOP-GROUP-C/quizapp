@@ -1,7 +1,7 @@
 const express = require ('express');
 const mongoose = require ('mongoose');
 var Schema = mongoose.Schema;
-const port = 80;
+const port = 3000;
 const app = express();
 
 function SetupServer()
