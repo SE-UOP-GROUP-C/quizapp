@@ -227,7 +227,7 @@ app.use(function(req, res, next) {
 });
 
 app.post("/login", function(request, response){
-  console.log(request);
+  console.log(request.body);
   userModel.find(function (err, contents){
     if (err) return console.console.error(err);
     if (contents.length == 0) {
