@@ -228,7 +228,7 @@ app.post("https://quizapp-se-uop-6c.herokuapp.com/login", function(request, resp
       if (err) return console.console.error(err);
       if (contents.length == 0) {
         response.body = false;
-        request.setRequestHeader("Access-Control-Allow-Origin", "https://quizapp-se-uop-6c.herokuapp.com/login");
+        response.setRequestHeader("Access-Control-Allow-Origin", "https://quizapp-se-uop-6c.herokuapp.com/login");
       }
   });
   }
