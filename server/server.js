@@ -228,12 +228,10 @@ app.use(function(req, res, next) {
 
 app.get("/login", function(request, response){
   console.log(request);
-  if (request.type == "check") {
-    userModel.find(function (err, contents){
-      if (err) return console.console.error(err);
-      if (contents.length == 0) {
-        response.body = false;
-      }
+  userModel.find(function (err, contents){
+    if (err) return console.console.error(err);
+    if (contents.length == 0) {
+      response.body = false;
+    } else response.body = true;
   });
-  }
 })
