@@ -218,8 +218,13 @@ db.once('open', function(){
       populateQuestions()
     }
   })
-  });
+});
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "https://se-uop-group-c.github.io/"); // update to match the domain you will make the request from
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, GET, POST");
+  next();
+});
 
 app.get("/login", function(request, response){
   console.log("a");
@@ -228,7 +233,6 @@ app.get("/login", function(request, response){
       if (err) return console.console.error(err);
       if (contents.length == 0) {
         response.body = false;
-        response.setRequestHeader("Access-Control-Allow-Origin", "https://quizapp-se-uop-6c.herokuapp.com/login");
         response.send(JSON.stringify(false))
       }
   });
