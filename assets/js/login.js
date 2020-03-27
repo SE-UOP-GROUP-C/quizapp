@@ -21,4 +21,9 @@ function onLogin(googleUser) {
   request.open('GET', 'https://quizapp-se-uop-6c.herokuapp.com/login', true);
   //request.setRequestHeader("Access-Control-Allow-Origin", "https://se-uop-group-c.github.io/")
   request.send(dataToSend);
+
+  if (request.body == false)
+  {
+    window.login.textContent = request.body;
+  }
 }
