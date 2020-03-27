@@ -48,6 +48,7 @@ var questionSchema = new Schema({
 mongoose.connect('mongodb://localhost:27017/app', {useNewUrlParser: true, useUnifiedTopology: true})
   .then(()=>{
     console.log('Successfully connected to database.');
+    console.log("Displaying contents of the database");
   })
   .catch((error)=>{
     console.log("Unable to connect to database");
@@ -180,9 +181,8 @@ function populateQuestions(){
 db.on('error', console.error.bind(console, 'connection error: '));
 //Once connected to the database
 db.once('open', function(){
-  console.log("Displaying contents of the database");
 
-
+  //Display contents of each model
   userModel.find(function(err, contents){
     if (err) return console.console.error(err);
     console.log("==============================");
@@ -190,8 +190,6 @@ db.once('open', function(){
     console.log("==============================");
     console.log(contents);
   })
-
-
   factModel.find(function(err, contents){
     if (err) return console.console.error(err);
     console.log("==============================");
@@ -205,8 +203,6 @@ db.once('open', function(){
       populateFacts()
     }
   })
-
-
   questionModel.find(function(err, contents){
     if (err) return console.console.error(err);
     console.log("==============================");
