@@ -12,8 +12,28 @@ Also removed fact_sub_id serial references fact_submission(fact_sub_id) for the 
 make the data.
 
 */
+insert into user_account (reg_uuid, reg_email, reg_username, reg_admin, reg_noti_email,reg_noti_push,reg_noti_time,reg_score)
+values ('135680', 'nepo21@gmail.com', 'Nepo', false, true, true, 1800, 73);
+insert into user_account (reg_uuid, reg_email, reg_username, reg_admin, reg_noti_email,reg_noti_push,reg_noti_time,reg_score)
+values ('135681', 'cas421@gmail.com', 'Castro42', false, true, true, 3600, 43);
+insert into user_account (reg_uuid, reg_email, reg_username, reg_admin, reg_noti_email,reg_noti_push,reg_noti_time,reg_score)
+values ('135682', 'johnluk12@gmail.com', 'jon43', false, true, true, 7200, 60);
 
-insert into fact (fact_id, fact_topic, fact_txt)
+insert into fact_submission (fact_sub_id, fact_sub_txt, reg_uuid)
+values('13331','The Earth is round','135680');
+insert into fact_submission (fact_sub_id, fact_sub_txt, reg_uuid)
+values('13332','First man on the moon was Neil Armstrong','135681');
+insert into fact_submission (fact_sub_id, fact_sub_txt, reg_uuid)
+values('13333','The ocean covers 71% of the Earths surface','135682');
+
+insert into topic(topic_id)
+values(1);
+insert into topic(topic_id)
+values(2);
+insert into topic(topic_id)
+values(3);
+
+insert into fact (fact_id, fact_topic, fact_txt,)
 values ('1111', '1', 'Napoleon Was Once Attacked By a Horde of Bunnies.');
 insert into fact (fact_id, fact_topic, fact_txt)
 values ('2222', '1', 'Thomas Edison Didnt Invent the Light Bulb.');
@@ -55,3 +75,24 @@ insert into question (que_id, que_dum1, que_dum2, que_ans,que_txt,fact_topic)
 values ('299', 'extinguish', 'evaporate', 'freeze', 'Water can boil and ___ at the same time','3');
 insert into question (que_id, que_dum1, que_dum2, que_ans,que_txt,fact_topic)
 values ('300', '10', '15', '20', '___% of Earth’s oxygen is produced by the Amazon rainforest','3');
+
+insert into fact_quiz (que_id,fact_id)
+values('211','1111');
+insert into fact_quiz (que_id,fact_id)
+values('222','2222');
+insert into fact_quiz (que_id,fact_id)
+values('233','3333');
+insert into fact_quiz (que_id,fact_id)
+values('244','4444');
+insert into fact_quiz (que_id,fact_id)
+values('255','5555');
+insert into fact_quiz (que_id,fact_id)
+values('266','6666');
+insert into fact_quiz (que_id,fact_id)
+values('277','7777');
+insert into fact_quiz (que_id,fact_id)
+values('288','8888');
+insert into fact_quiz (que_id,fact_id)
+values('299','9999');
+insert into fact_quiz (que_id,fact_id)
+values('300','1000');

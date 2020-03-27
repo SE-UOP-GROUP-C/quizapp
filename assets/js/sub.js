@@ -11,6 +11,25 @@ function validate(){
 /*
 Conditions for email making sure that an @ and a . must be included and also having more that 5 characters to insure the email is correct, if the email does not meet one of the criteria a text message below the input boxes will appear informing the user about the email being invalid, so the user can rewrite a correct email.
 */
+
+
+
+/*
+TEST CASE 1
+
+The user inserts their email, the topic of the fact and the actual fact if all is valid it will then show a message indicating the next step which is sending the email through their email after they press ok on the message shown the hotmail inbox will pop out with all the information that was submitted through the form and the user has to click the send button and it will be sent to the admin.
+---------------------------------------------
+
+ TEST CASE 2
+Going through the site inserting a valid email, if a valid email is not inserted the fact will not be sent
+and a error message will pop up below the input boxes saying the email is invalid and until the email becomes valid the message will remain. After if the email is valid but the other options are invalid like fact having less than 2 characters will cause a new error message to appear. The messages
+change depending on which inputbox is incorrect and moving on after each was is correct will move to the next check.
+
+
+
+
+ */
+
   if(email.indexOf("@") == -1 || email.length < 5 || email.indexOf(".") == -1){
     text = "Please enter valid email";
     status.innerHTML = text;
