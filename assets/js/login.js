@@ -15,10 +15,10 @@ function onLogin(googleUser) {
 
   if (googleUser == undefined) {
     dataToSend = {type: "check", id: 1};
-  }
+
   let jsonToSend = JSON.stringify(dataToSend);
   let request = new XMLHttpRequest();
-  request.open('POST', '/login', true);
+  request.open('POST', 'https://quizapp-se-uop-6c.herokuapp.com/login', true);
   request.setRequestHeader("Access-Control-Allow-Origin", "https://quizapp-se-uop-6c.herokuapp.com/")
   request.send(dataToSend);
 }
