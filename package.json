@@ -2,7 +2,7 @@
   "name": "quizapp",
   "version": "1.0.0",
   "description": "Mock data has been added via JSON to be a visual representation of what the Quiz App will do. (interactive demo) ### High - [X] Google sign in - [X] Quizzes - [X] Fact presentation - [X] Database   - [X] ERD   - [X] Creation file   - [X] Population (partial)   - [ ] Link to front end",
-  "main": "index.js",
+  "main": "/server/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
