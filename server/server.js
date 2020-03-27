@@ -231,7 +231,7 @@ app.get("/login", function(request, response){
   userModel.find(function (err, contents){
     if (err) return console.console.error(err);
     if (contents.length == 0) {
-      response.body = false;
-    } else response.body = true;
+      response.send(false);
+    } else response.send(true);
   });
 })
