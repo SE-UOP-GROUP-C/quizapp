@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Fact submission</title>
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script src="assets/js/sub.js"></script>
+</head>
+<body>
+
+	    <div class="checkboxWrapper">
+	      <label  class = "checkboxDisp" for="checkbox">
+	        <input type="checkbox" id="checkbox" />
+	      </label>
+	    </div>
+
+	    <section>
+  <h1>Submit your fact</h1>
+	<form action="mailto:up877496@myport.ac.uk" enctype="text/plain" onsubmit="return validate();" method="POST">
+
+  <label>Email</label>
+        <input type="text" name="email" placeholder="example@gmail.com" id="email"/>
+
+  <label>Topic</label>
+        <input type="text" name="topic" placeholder="e.g. Science" id="topic"/>
+
+	<div class="text">
+		<label>Fact</label>
+	  <textarea name="fact "id="fact"></textarea>
+		</div>
+
+		  <div id="status"></div>
+        <input id="button" type="submit"/>
+				<input id="button" type="reset" value="Clear form" />
+  </form>
+	<a id="back" class="link" href="home.html">Return Home</a>
+
+</section>
+</body>
+<script src="assets/js/settings.js"></script>
+</html>

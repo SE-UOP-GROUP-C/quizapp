@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html>
-    
-    <head>
-        <meta charset="utf-8">
-        <title>Quiz App</title>
-        <link rel="stylesheet" href="assets/css/main.css">
-    </head>
+
+<head>
+  <meta charset="utf-8">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script src="assets/js/quizScript.js" charset="utf-8"></script>
+</head>
+
 <body>
-<section>
+  <div class="checkboxWrapper">
+    <label class="checkboxDisp" for="checkbox">
+      <input type="checkbox" id="checkbox" />
+    </label>
+  </div>
+  <section>
     <h1>Quiz App</h1>
-`   <nav>
-    <ul>
-    <!--These buttons should take you to a html page, then depending on what the user
+    <nav>
+
+      <!--These buttons should take you to a html page, then depending on what the user
     pressed the page will be "generated" based on it.
 
-    Essentially as soon as they press science they should be presented with the science facts, 
+    Essentially as soon as they press science they should be presented with the science facts,
     but the html page will just be the generic fact display page used by all 3(for now?) subjects.
 
-    I'm guessing this will be done with javascript.-->     
-    <li><a href="home.html">Science</a></li>
-    <li><a href="home.html">History</a></li>
-    <li><a href="home.html">Math</a></li>
-    <li><a href="home.html">Return</a></li>
+    I'm guessing this will be done with javascript.-->
+      <a class="link" id="topicSelect" data-value="science">Science</a>
+      <a class="link" id="topicSelect" data-value="history">History</a>
+      <a class="link" id="topicSelect" data-value="maths">Math</a>
+      <a id="back" class="link" href="home.html">Return Home</a>
 
-    </ul>
+
     </nav>
-</section>
+  </section>
 
-
+  <script src="assets/js/settings.js"></script>
 </body>
+
 </html>

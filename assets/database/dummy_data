@@ -1,0 +1,57 @@
+
+
+\c main;
+
+/*
+Dummy data
+ 1 =History
+ 2 =Geography
+ 3 =Science
+
+Also removed fact_sub_id serial references fact_submission(fact_sub_id) for the time being to make it easier to
+make the data.
+
+*/
+
+insert into fact (fact_id, fact_topic, fact_txt)
+values ('1111', '1', 'Napoleon Was Once Attacked By a Horde of Bunnies.');
+insert into fact (fact_id, fact_topic, fact_txt)
+values ('2222', '1', 'Thomas Edison Didnt Invent the Light Bulb.');
+insert into fact (fact_id, fact_topic, fact_txt)
+values ('3333', '1', 'Cleopatra Was Greek ' );
+insert into fact (fact_id, fact_topic, fact_txt)
+values ('4444', '1', 'All British tanks since 1945 have included equipment to make tea.' );
+insert into fact (fact_id, fact_topic, fact_txt)
+values ('5555', '2', 'California has more people than all of Canada.' );
+insert into fact (fact_id, fact_topic, fact_txt)
+values ('6666', '2', 'Australia is wider than the moon.');
+insert into fact (fact_id, fact_topic, fact_txt)
+values ('7777',' 2', 'Vatican City is the smallest country in the world.' );
+insert into fact (fact_id, fact_topic, fact_txt)
+values ('8888', '3', 'The average human body carries ten times more bacterial cells than human cells.' );
+insert into fact (fact_id, fact_topic, fact_txt)
+values ('9999', '3', 'Water can boil and freeze at the same time.');
+insert into fact (fact_id, fact_topic, fact_txt)
+values ('1000', '3', '20% of Earth’s oxygen is produced by the Amazon rainforest.');
+
+
+insert into question (que_id, que_dum1, que_dum2, que_ans,que_txt,fact_topic)
+values ('211', 'Elephans', 'Horses', 'Bunnies', 'Napoleon Was Once Attacked By a Horde of ___','1');
+insert into question (que_id, que_dum1, que_dum2, que_ans,que_txt,fact_topic)
+values ('222', 'Phonograph', 'Movie camera', 'Light bulb', 'Thomas Edison Didnt Invent the ___','1');
+insert into question (que_id, que_dum1, que_dum2, que_ans,que_txt,fact_topic)
+values ('233', 'Egyptian', 'Roman', 'Greek', 'Cleopatra Was ___','1');
+insert into question (que_id, que_dum1, que_dum2, que_ans,que_txt,fact_topic)
+values ('244', 'Bombs', 'coffee', 'Tea', 'All British tanks since 1945 have included equipment to make ___','1');
+insert into question (que_id, que_dum1, que_dum2, que_ans,que_txt,fact_topic)
+values ('255', 'South Africa', 'India', 'Canada', 'California has more people than all of ___','2');
+insert into question (que_id, que_dum1, que_dum2, que_ans,que_txt,fact_topic)
+values ('266', 'The planet Mars', 'The planet Pluto', 'The moon', 'Australia is wider than ___','2');
+insert into question (que_id, que_dum1, que_dum2, que_ans,que_txt,fact_topic)
+values ('277', 'Malta', 'Cyprus', 'Vatican City', 'The smallest country in the world is ___','2');
+insert into question (que_id, que_dum1, que_dum2, que_ans,que_txt,fact_topic)
+values ('288', '12', '15', '10', 'The average human body carries ___ times more bacterial cells than human cells','3');
+insert into question (que_id, que_dum1, que_dum2, que_ans,que_txt,fact_topic)
+values ('299', 'extinguish', 'evaporate', 'freeze', 'Water can boil and ___ at the same time','3');
+insert into question (que_id, que_dum1, que_dum2, que_ans,que_txt,fact_topic)
+values ('300', '10', '15', '20', '___% of Earth’s oxygen is produced by the Amazon rainforest','3');
