@@ -224,10 +224,10 @@ db.once('open', function(){
 app.post("../login", function(request, response){
   console.log("a");
   if (request.type == "check") {
-    results = userModel.find(function (err, contents){
+    userModel.find(function (err, contents){
       if (err) return console.console.error(err);
       if (contents.length == 0) {
-
+        console.log(contents);
       }
   });
   }
