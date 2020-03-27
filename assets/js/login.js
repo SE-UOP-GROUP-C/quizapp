@@ -19,6 +19,6 @@ function onLogin(googleUser) {
   let jsonToSend = JSON.stringify(dataToSend);
   let request = new XMLHttpRequest();
   request.open('GET', 'https://quizapp-se-uop-6c.herokuapp.com/login', true);
-  request.setRequestHeader("Access-Control-Allow-Origin", "https://se-uop-group-c.github.io/")
+  //request.setRequestHeader("Access-Control-Allow-Origin", "https://se-uop-group-c.github.io/")
   request.send(dataToSend);
 }
