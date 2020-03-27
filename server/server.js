@@ -1,17 +1,17 @@
 const express = require ('express');
 const mongoose = require ('mongoose');
 var Schema = mongoose.Schema;
-
+const port = 80;
 const app = express();
 
 function SetupServer()
 {
   //Place server-init methods here
   //Once server has been setup, display a message in console
-  console.log("Server hosted on port 3000")
+  console.log("Server hosted on port " + port)
 }
 
-app.listen(3000, SetupServer(), );
+app.listen(port, SetupServer(), );
 
 
 //Define Schemas for use with MongoDB
@@ -217,3 +217,16 @@ db.once('open', function(){
     }
   })
   });
+
+
+app.post(window.location.href, function(request, response){
+  console.log("a");
+  if (request.type == "check") {
+    results = userModel.find(function (err, contents){
+      if (err) return console.console.error(err);
+      if (contents.length == 0) {
+
+      }
+  });
+  }
+})
