@@ -18,12 +18,23 @@ function onLogin(googleUser) {
   }
   let jsonToSend = JSON.stringify(dataToSend);
   let request = new XMLHttpRequest();
-  request.open('GET', 'https://quizapp-se-uop-6c.herokuapp.com/login', true);
+  request.onreadystatechange = GetUsername;
+  request.open('POST', 'https://quizapp-se-uop-6c.herokuapp.com/login', true);
   //request.setRequestHeader("Access-Control-Allow-Origin", "https://se-uop-group-c.github.io/")
   request.send(dataToSend);
 
   if (request.body == false)
   {
     window.login.textContent = request.body;
+  }
+}
+
+function GetUsername(){
+  if (request.readyState == 4 && request.status == 200) {
+    if (request.responseText == "Not found") {
+      //error
+    } else {
+      window.login.textContent = "User not in database"
+    }
   }
 }
