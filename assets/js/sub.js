@@ -17,16 +17,13 @@ Conditions for email making sure that an @ and a . must be included and also hav
 /*
 TEST CASE 1
 
-The user inserts their email, the topic of the fact and the actual fact if all is valid it will then show a message indicating the next step which is sending the email through their email after they press ok on the message shown the hotmail inbox will pop out with all the information that was submitted through the form and the user has to click the send button and it will be sent to the admin.
+The user inserts their email, the topic of the fact and the actual fact if all is valid it will then show a message saying that their fact will be submitted for review and then going into another page to confirm they are not a robot after they press the tick button on the message shown the fact is sent
 ---------------------------------------------
 
  TEST CASE 2
 Going through the site inserting a valid email, if a valid email is not inserted the fact will not be sent
 and a error message will pop up below the input boxes saying the email is invalid and until the email becomes valid the message will remain. After if the email is valid but the other options are invalid like fact having less than 2 characters will cause a new error message to appear. The messages
 change depending on which inputbox is incorrect and moving on after each was is correct will move to the next check.
-
-
-
 
  */
 
@@ -55,7 +52,7 @@ change depending on which inputbox is incorrect and moving on after each was is 
 /*
 Alerting the user with a pop up message informing them that they need to click on send and their fact will be reviewed, then they can reset the form and send another fact if they wish.
 */
-    alert("Press send and your fact will be submitted for review");
+    alert("Your fact will be submitted for review");
     return true;
 
   }
