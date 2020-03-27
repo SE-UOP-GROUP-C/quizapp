@@ -219,7 +219,7 @@ db.once('open', function(){
   });
 
 
-app.post(window.location.href, function(request, response){
+app.post("../login", function(request, response){
   console.log("a");
   if (request.type == "check") {
     results = userModel.find(function (err, contents){
