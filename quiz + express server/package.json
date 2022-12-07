@@ -4,7 +4,7 @@
   "description": "Dispenses facts and quizzes you on them",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "node-fetch": "^2.6.0",
     "pg": "^7.18.2"
   },
